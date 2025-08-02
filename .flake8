@@ -1,0 +1,17 @@
+[flake8]
+max-line-length = 88
+ignore = 
+    # Star imports (common in __init__.py files)
+    F403,
+    # Variables from star imports 
+    F405,
+    # f-string missing placeholders (sometimes intentional)
+    F541
+exclude = 
+    .git,
+    __pycache__,
+    build,
+    dist,
+    *.egg-info,
+    .venv,
+    venv

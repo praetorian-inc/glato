@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "praetorian-glato"
+version = "1.0.0b1"
+description = "GitLab Actions Enumeration and Attack Framework"
+readme = "readme.md"
+authors = [
+    {name = "John Stawinski", email = "john.stawinski@praetorian.com"},
+    {name = "Matthew Jackoski", email = "matthew.jackoski@praetorian.com"},
+    {name = "Elgin Lee", email = "elgin.lee@praetorian.com"},
+    {name = "Mason Davis", email = "mason.davis@praetorian.com"}
+]
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+dependencies = [
+    "colorama",
+    "requests>=2.28.1",
+    "pyyaml",
+    "packaging",
+    "cryptography",
+    "beautifulsoup4"
+]
+
+[project.optional-dependencies]
+test = [
+    "flake8",
+    "pytest>=7.1.2",
+    "pytest-cov",
+    "GitPython>=3.1.31"
+]
+
+[tool.setuptools]
+packages = ["glato"]
+
+[tool.pytest.ini_options]
+testpaths = ["unit_test", "e2e_test"]
+python_files = ["test_*.py"]
+addopts = "--cov=glato"
+
+[tool.coverage.run]
+source = ['glato']
+
+[tool.coverage.html]
+directory = "cov_html"
+
+[project.scripts]
+glato = "glato.main:entry"
+praetorian-glato = "glato.main:entry"

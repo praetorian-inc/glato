@@ -1,0 +1,1 @@
+# End-to-end tests for Glato using a real GitLab environment 
