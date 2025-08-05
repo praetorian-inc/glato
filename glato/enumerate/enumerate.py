@@ -640,7 +640,7 @@ class Enumerator:
 
     def check_sufficient_token_scopes(self, args):
         if args.enumerate_groups or args.enumerate_projects or args.check_branch_protections or args.self_enumeration or args.enumerate_projects or args.enumerate_secrets or args.enumerate_runners:
-            if 'api' not in self._user_info.scopes and 'read_api' not in self.scopes:
+            if 'api' not in self._user_info.scopes and 'read_api' not in self._user_info.scopes:
                 print("Error: api or read_api scope required.")
                 return False
         if args.exfil_secrets_via_ppe:
