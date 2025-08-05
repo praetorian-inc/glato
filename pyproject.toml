@@ -38,8 +38,9 @@ test = [
     "GitPython>=3.1.31"
 ]
 
-[tool.setuptools]
-packages = ["glato"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["glato*"]
 
 [tool.pytest.ini_options]
 testpaths = ["unit_test", "e2e_test"]
