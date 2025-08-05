@@ -155,7 +155,7 @@ This tool is a natural companion [Gato](https://github.com/praetorian-inc/gato/)
 
 ## Documentation
 
-### Glato Useage Scenarios
+### Glato Usage Scenarios
 
 This page is a living document of real-world examples where glato is useful. At a high level: I have access to`X`, how can I do `Y`?
 
