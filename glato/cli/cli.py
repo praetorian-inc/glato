@@ -256,9 +256,10 @@ def _validate_args(args, token):
 
     # Check enumerate-secrets dependencies
     if args.enumerate_secrets and not (
-            args.enumerate_projects or args.enumerate_groups or args.project_path):
+            args.enumerate_projects or args.enumerate_groups or
+            args.project_path or args.self_enumeration):
         errors.append(
-            "--enumerate-secrets requires either --enumerate-projects and/or --enumerate-groups, or --project-path")
+            "--enumerate-secrets requires either --enumerate-projects and/or --enumerate-groups, --project-path, or --self-enumeration")
 
     # Check exfil-secrets-via-ppe dependencies
     if args.exfil_secrets_via_ppe:
