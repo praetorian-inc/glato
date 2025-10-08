@@ -63,8 +63,7 @@ class Api():
 
         self.proxies = None
         if proxy:
-            scheme = urlparse(proxy).scheme
-            self.proxies = {scheme: proxy}
+            self.proxies = {'http': proxy, 'https': proxy}
 
         # Initialize caches
         self._cache = {
