@@ -1,3 +1,14 @@
+> [!WARNING]
+> ## This repository is deprecated and archived
+>
+> Glato has been superseded by **[Trajan](https://github.com/praetorian-inc/trajan)**, Praetorian's multi-platform CI/CD vulnerability detection and attack automation tool. Trajan consolidates GitHub Actions (Gato) and GitLab (Glato) CI/CD attack capabilities into a single, actively-maintained project.
+>
+> **Please migrate to Trajan:** https://github.com/praetorian-inc/trajan
+>
+> No further updates, bug fixes, or security patches will be made to this repository.
+
+---
+
 ![Supported Python versions](https://img.shields.io/badge/python-3.7+-blue.svg)
 
 # Glato (GitLab Attack TOolkit) -- BETA VERSION
